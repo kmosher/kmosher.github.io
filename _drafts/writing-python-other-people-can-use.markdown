@@ -7,22 +7,28 @@ I love writing little python scripts. I _really, really_ love writing small pyth
 
 Previously, I've been living a bit of a fantasy life.
 All my users were on Linux boxes that I had configuration management control over.
-This meant I knew the exact environment I was targeting, and I could use `dh_virtualenv` for all my packaging.
+This meant I knew the exact environment I was targeting, and I could use [dh_virtualenv][dh_virtualenv] for all my packaging.
 
-Now though I find myself targeting a bunch of OS X users, each of whom maintains their own environment. Furthermore, I don't have easy access to a great CI pipline.
+Now though I find myself targeting some less pleasent environments: 1) a bunch of user-managed OS X boxes and 2) an environment without a good CI pipline.
+Both of these have sent me re-examining what the current state of the world is when it comes to turning small chunks of python code into small apps.
 
+## Virtualenv
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
+# Tools
+[py2app]:             https://pythonhosted.org/py2app/index.html
+[homebrew]:           http://brew.sh/
+[py2exe]:             http://www.py2exe.org/
+[cx_Freeze]:          https://cx-freeze.readthedocs.io/en/latest/
+[pypa]:               https://packaging.python.org/
+[pyInstaller]:        http://www.pyinstaller.org/
+[dh_virtualenv]:      https://dh-virtualenv.readthedocs.io/en/1.0/usage.html
+[pex]:                https://pex.readthedocs.io/en/stable/
+[pipsi]:              https://github.com/mitsuhiko/pipsi
+[PyRun]:              https://www.egenix.com/products/python/PyRun/
 [virtualenv-burrito]: https://github.com/brainsik/virtualenv-burrito
 [autoenv]:            https://github.com/kennethreitz/autoenv
+# Good overviews
+[glyph-talk]:         http://pyvideo.org/pycon-us-2016/glyph-shipping-software-to-users-with-python-pycon-2016.html
+[glyph-blog]:         https://glyph.twistedmatrix.com/2015/09/software-you-can-use.html
+[embedding-blog]:     http://hackerboss.com/how-to-distribute-commercial-python-applications/
+[freezing-your-code]: http://docs.python-guide.org/en/latest/shipping/freezing/
